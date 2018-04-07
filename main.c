@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
         return EXIT_SUCCESS;
     }
     
-	int sockfd = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP);
-	if (sockfd < 0)
+    int sockfd = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP);
+    if (sockfd < 0)
     {
-		fprintf(stderr, "socket error: %s\n", strerror(errno)); 
-		return EXIT_FAILURE;
+        fprintf(stderr, "socket error: %s\n", strerror(errno)); 
+        return EXIT_FAILURE;
     }
     
     int status = DEST_NOT_REACHED;
@@ -56,5 +56,5 @@ int main(int argc, char *argv[])
             fprintf(stderr, "error while receiving: %s\n", strerror(errno)); 
     }
     
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
